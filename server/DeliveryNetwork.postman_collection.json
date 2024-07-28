@@ -1,0 +1,1981 @@
+{
+	"info": {
+		"_postman_id": "1c2de114-98a4-4f97-85f5-71522b2138f7",
+		"name": "DeliveryNetwork",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "activer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNWIwNWI0MGFkZDQwZjE5MzYzYTlkNSIsImlhdCI6MTY1MDEzMjQwNSwiZXhwIjoxNjUwOTk2NDA1fQ.rn5p5cKwq-hQXOnMnrBxBuJPW_hBORThC1HIBEXZASU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/activer/625b7f8dae964ec06862dc54",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"activer",
+								"625b7f8dae964ec06862dc54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetListOfusers",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/disabledusers?limit=4&page=1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"disabledusers"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "_id,name,email,role,active",
+									"disabled": true
+								},
+								{
+									"key": "_id",
+									"value": "625b7f8dae964ec06862dc54",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "4"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"disabled": true
+								},
+								{
+									"key": "email[search]",
+									"value": "younes",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DisableAccounr",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNWIwNWI0MGFkZDQwZjE5MzYzYTlkNSIsImlhdCI6MTY1MDE2MzM2MywiZXhwIjoxNjUxMDI3MzYzfQ.ZZ_5bd_jM1o2DhrcVRlFkaRrpkGIOqLcJmIH6JMIN3o",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/desactive/625b7f8dae964ec06862dc54",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"desactive",
+								"625b7f8dae964ec06862dc54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMe",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/getMe",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateMe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjJkZWM3ODBlODc5NjVmOTc1MDVhZCIsImlhdCI6MTY1MDY0Njg3NSwiZXhwIjoxNjUxNTEwODc1fQ.6s4ChKxo0HQlCp7kVCBafKsdN1UQJFD3ipoKS9Qo-sQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"younss123\",\r\n    \"passwordConfirm\" : \"younss123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/updateMe",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"updateMe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNjJkZWM3ODBlODc5NjVmOTc1MDVhZCIsImlhdCI6MTY1MDY4MDE3MSwiZXhwIjoxNjUxNTQ0MTcxfQ.JWtqRDp9YGn8CpZJZiVJQb5AC4cWCVV_BD8g5PIfVCg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/getUser/625ed8ce8a0e705cb32ea892",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"getUser",
+								"625ed8ce8a0e705cb32ea892"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllUSer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/admin/getAll",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"admin",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload/user/avatar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "profile",
+									"type": "file",
+									"src": "/C:/Users/FP Stuff/Desktop/jpg2png (6)/jayby5.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/user/upload/user/avatar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"upload",
+								"user",
+								"avatar"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"costumer me\",\r\n  \"email\": \"updateMe@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/signup",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3001/api/v1/users/testprotect",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTZlMDI2NTE5ZjJmODFlZDdlNGU1YSIsImlhdCI6MTY0OTkwNjE4OSwiZXhwIjoxNjUwNzcwMTg5fQ.aiXQroxaAbxABc9ArCYuKDqLnFaNcO-dL4nbbV1il4M",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/users/testuseronlypath",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"testuseronlypath"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"admin3@gmail.com\",\r\n    \"password\" : \"younssyoun\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ForgetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"normal@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/forgetpassword",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"forgetpassword"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ResetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\" : \"younssyoun123@\",\r\n    \"passwordConfirm\" : \"younssyoun123@\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/resetpassword/ea7463992d14c6c6090f5b3012d87d846d95935f7adb6a708332365c86d2c19f",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"resetpassword",
+								"ea7463992d14c6c6090f5b3012d87d846d95935f7adb6a708332365c86d2c19f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "testcompaniesonlypath",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyNTVjYmNiMzhkY2Y0MWNiZGU1OGMxYiIsImlhdCI6MTY0OTg1ODMzNiwiZXhwIjoxNjUwNzIyMzM2fQ.NN0Axzak-dWVnni0TAxTNxzE0Za-hiTR2St8alKYUGI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/users/testcompaniesonlypath",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"testcompaniesonlypath"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AskEmailValToken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"tihemon287@vapaka.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/sendEmailVerificationToken",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"sendEmailVerificationToken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EmailValidation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/emailValidation/tyuyutyutyutyu",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"emailValidation",
+								"tyuyutyutyutyu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Admin signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Laposta\",\r\n  \"email\": \"Laposta@gmail.com\",\r\n  \"active\" : true,\r\n  \"role\" : \"deliverycompanie\",\r\n  \"password\" : \"younssyoun\",\r\n  \"valideEmail\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/adminregister",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"adminregister"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/authentication/users/signout",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"authentication",
+								"users",
+								"signout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Countries&Cities",
+			"item": [
+				{
+					"name": "AddCountry",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Russia\",\r\n    \"twoLetter\" : \"RU\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/add/country",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"add",
+								"country"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "country/all",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/get/country/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"get",
+								"country",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/country",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/get/country/62727b5e423918672da39818",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"get",
+								"country",
+								"62727b5e423918672da39818"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add/city",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"AZROU\" ,\r\n    \"countryId\" : \"6272b377506fc84b011d7968\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/add/city",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"add",
+								"city"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get/city/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/get/city/all",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"get",
+								"city",
+								"all"
+							],
+							"query": [
+								{
+									"key": "in_country",
+									"value": "6272b377506fc84b011d7968",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "2",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/city/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/get/city/627286626eb2bb56c096e319",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"get",
+								"city",
+								"627286626eb2bb56c096e319"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/remove/city",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/remove/city/6282dd126055666e48bae2fb",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"remove",
+								"city",
+								"6282dd126055666e48bae2fb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cityandcountry/remove/country/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/cityandcountry/remove/country/6282dc836055666e48bae2f4",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"cityandcountry",
+								"remove",
+								"country",
+								"6282dc836055666e48bae2f4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delivery",
+			"item": [
+				{
+					"name": "Add DeliveryZone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"from\": \"6272b3c1506fc84b011d796e\",\r\n   \"to\" : \"6272b3cc506fc84b011d7972\",\r\n   \"estimated_days\" : 1,\r\n   \"fees\" : 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/add/deliveryZone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"add",
+								"deliveryZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllZone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/getAll/deliveryZone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"getAll",
+								"deliveryZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetZoneById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/getOne/deliveryZone/62743a019dd9769172cb2a61",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"getOne",
+								"deliveryZone",
+								"62743a019dd9769172cb2a61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAuthDeliveryZone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/getAuth/deliveryZone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"getAuth",
+								"deliveryZone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/delivery/addWorkingDays",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Monday\" : true ,\r\n    \"Tuesday\" : true,\r\n    \"Wednesday\" : true ,\r\n    \"Thursday\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/addWorkingDays",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"addWorkingDays"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatephone",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\" : [\"06677119823\" , \"0569839477\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/updatephone",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"updatephone"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "comlete/infomation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"deliveryZones\" : [\r\n        {\r\n            \"from\": \"6272b3c1506fc84b011d796e\",\r\n            \"to\" : \"6272b3cc506fc84b011d7972\",\r\n            \"estimated_days\" : 1,\r\n            \"fees\" : 0\r\n        },\r\n         {\r\n            \"from\": \"6272b3c1506fc84b011d796e\",\r\n            \"to\" : \"627c18d960081cc316521db5\",\r\n            \"estimated_days\" : 1,\r\n            \"fees\" : 0\r\n        }\r\n    ],\r\n    \"workingdays\" : {\r\n        \"Monday\" : true ,\r\n        \"Tuesday\" : true,\r\n        \"Wednesday\" : true ,\r\n        \"Thursday\" : true\r\n    },\r\n    \"phones\" : [\"06677119823\" , \"0569839477\"]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/comlete/infomation",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"comlete",
+								"infomation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delivery/remove/deliveryZone/62743a019dd9769172cb2a61",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/remove/deliveryZone/62743a019dd9769172cb2a61",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"remove",
+								"deliveryZone",
+								"62743a019dd9769172cb2a61"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delivery/getDelivery/deliveryZone/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/delivery/getDelivery/deliveryZone/6283ef05b23e3064f68880a7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"delivery",
+								"getDelivery",
+								"deliveryZone",
+								"6283ef05b23e3064f68880a7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shipping",
+			"item": [
+				{
+					"name": "AddManyShippmenttype",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"typeOfshipping\" : \"air\",\r\n        \"Description\" : \"Air shippment Fast\"\r\n    },{\r\n        \"typeOfshipping\" : \"ocean\",\r\n        \"Description\" : \"ocean shippment Fast\"\r\n    },{\r\n        \"typeOfshipping\" : \"ground\",\r\n        \"Description\" : \"ground shippment Fast\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/addMany/shippingType",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"addMany",
+								"shippingType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMany/shippingTariff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"delivery_zone\" : \"6272b4f432bccca02c10a2da\",\r\n    \"shipping_type\" : \"62742118286872dd9f9fa0a6\",\r\n    \"price_par_kg\": 3,\r\n    \"price_par_km\" : 1.5,\r\n    \"cost_par_unit_ofvolume\" : 0,\r\n    \"fees\" : 15\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/addMany/shippingTariff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"addMany",
+								"shippingTariff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll/shippmentTariff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/getAll/shippingTariff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"getAll",
+								"shippingTariff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/getAllbyDelivryzone/shippingTariff/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/getAllbyDelivryzone/shippingTariff/6272b4f432bccca02c10a2da",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"getAllbyDelivryzone",
+								"shippingTariff",
+								"6272b4f432bccca02c10a2da"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteOne/shippingTariff",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/DeleteOne/shippingTariff/627302d3428aab6b85a7bb50",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"DeleteOne",
+								"shippingTariff",
+								"627302d3428aab6b85a7bb50"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMany/shippingTariff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/addOne/shippingTariff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"addOne",
+								"shippingTariff"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll/shippingType",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/getAll/shippingType",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"getAll",
+								"shippingType"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AdminRT",
+			"item": [
+				{
+					"name": "Addmanycurrency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Rob\",\r\n    \"symbol\" : \"RB\"\r\n}\r\n   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/foradmin/addMany/currency",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"foradmin",
+								"addMany",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete/onePackage/",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/foradmin/delete/onePackage/62902381a5e07f813b53d477",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"foradmin",
+								"delete",
+								"onePackage",
+								"62902381a5e07f813b53d477"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "foradmin/getAll/currency",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/foradmin/getAll/currency",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"foradmin",
+								"getAll",
+								"currency"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/get/statistique",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/foradmin/get/statistique",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"foradmin",
+								"get",
+								"statistique"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Packages",
+			"item": [
+				{
+					"name": "addMany",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n    {\r\n        \"shipments\" : {\r\n            \"fromCity\" : \"6272b3c1506fc84b011d796e\",\r\n            \"toCity\" : \"6272b3cc506fc84b011d7972\",\r\n            \"status\" : \"6277fa546f190b4392da6186\",\r\n            \"workflow\" :\"6277d1a6682f263353c09855\"\r\n        },\r\n\r\n        \"shipment_fragments\" : [\r\n            {\r\n                \"fromCity\" : \"6272b3c1506fc84b011d796e\",\r\n                \"toCity\" : \"6272b3cc506fc84b011d7972\",\r\n                \"ChosedTarrif\" : \"6287d139896cad89bb7a2f03\",\r\n                \"position\" : 1,\r\n                \"hasNext\" : true,\r\n                \"hasPrevious\" : false,\r\n                \"currentstatus\" : \"6277fa546f190b4392da6186\"\r\n                \r\n            },\r\n            {\r\n                \"fromCity\" : \"6272b3c1506fc84b011d796e\",\r\n                \"toCity\" : \"6272b3cc506fc84b011d7972\",\r\n                \"ChosedTarrif\" : \"6287d139896cad89bb7a2f03\",\r\n                \"position\" : 2,\r\n                \"hasNext\" : false,\r\n                \"hasPrevious\" : false,\r\n                \"currentstatus\" : \"6277fa546f190b4392da6186\"\r\n            }\r\n        ],\r\n\r\n        \"packages\" : [\r\n            {\r\n                \"title\": \"o hada hta hwa package akhore akhawa\",\r\n                \"description\": \"Desc Desc\",\r\n                \"amout\" : \"20\",\r\n                \"isFragile\" : true,\r\n                \"needsCollect\" : true,\r\n                \"dimensions\" : {\r\n                    \"width\" : 12.5,\r\n                    \"length\" : 10,\r\n                    \"height\" : 12.3\r\n                },\r\n                \"receiver\": {\r\n                    \"name\" : \"Younes Bouchbouk\",\r\n                    \"phone\" : \"0667719871\",\r\n                    \"email\": \"younss.india@gmail.com\",\r\n                    \"address\" : \"Zn9At nahda\",\r\n                    \"note\" : \"Bonjour Livreur\"\r\n                },\r\n                \"packagedetails\" : {\r\n                    \"totlaPrice\" : 56,\r\n                    \"currency\" : \"6275aeecc91c288468995882\",\r\n                    \"orderLines\": {\r\n                        \"unitePrice\" : 10,\r\n                        \"qty\" : 3 ,\r\n                        \"totalPrice\" : 56,\r\n                        \"produts\" : [\r\n                            {\r\n                                \"title\" : \"produite 1\",\r\n                                \"Decription\" : \"walo gha produite\",\r\n                                \"price\" : 13\r\n                            },\r\n                            {\r\n                                \"title\" : \"produite 2\",\r\n                                \"Decription\" : \"walo gha produite 12\",\r\n                                \"price\" : 10\r\n                            }\r\n                        ]\r\n                    }\r\n                } \r\n            }\r\n        ]\r\n\r\n       \r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/packages/gestion/addMany/Package",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"packages",
+								"gestion",
+								"addMany",
+								"Package"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getOne/Package/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/packages/gestion/getOne/Package/6293ee5ead0b15db56974ebe",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"packages",
+								"gestion",
+								"getOne",
+								"Package",
+								"6293ee5ead0b15db56974ebe"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdatePackage",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\" : \"titre jdide kahawa\",\r\n    \"needsCollect\" : false,\r\n    \"delivery\": {\r\n                \"address\": \"Zn9At jdida\",\r\n                \"note\": \"Bonjour jdide\"\r\n            }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/packages/gestion/update/package/6276acc64dde7eba308c8eaa",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"packages",
+								"gestion",
+								"update",
+								"package",
+								"6276acc64dde7eba308c8eaa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findpackageRoute",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\" : \"6272b3c1506fc84b011d796e\",\r\n    \"to\" :   \"6287d00f896cad89bb7a2d93\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/packages/gestion/findpackageRoute",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"packages",
+								"gestion",
+								"findpackageRoute"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gestion/getUser/package",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/packages/gestion/getUser/package/6284d5b3fbe36c31fb8c5425",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"packages",
+								"gestion",
+								"getUser",
+								"package",
+								"6284d5b3fbe36c31fb8c5425"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/packages/gestion/find/Delivery/packages/6283ef05b23e3064f68880a7",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"packages",
+								"gestion",
+								"find",
+								"Delivery",
+								"packages",
+								"6283ef05b23e3064f68880a7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "shipment",
+			"item": [
+				{
+					"name": "addShipingStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\" : \"padding\",\r\n        \"description\"  : \"not picked yet\"\r\n    },{\r\n        \"name\" : \"on Way\",\r\n        \"description\" : \"package is on the way\"\r\n    },\r\n    {\r\n        \"name\" : \"Arrived\",\r\n        \"description\" : \"shipping had arrived to the destination city\"\r\n    \r\n    },\r\n     {\r\n         \"name\" : \"delivred\",\r\n         \"description\" : \"receiver has received the package\"\r\n     },\r\n     {\r\n         \"name\" : \"payed\",\r\n         \"description\"  : \"for Cod when receiver has pay tha product\"\r\n     },\r\n     {\r\n         \"name\" : \"return\",\r\n         \"description\" : \"product has been returned COD status\"\r\n     }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipment/addMany/shipmentstatus",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"addMany",
+								"shipmentstatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addMany/shipmentWorkflow",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n   \r\n    {\r\n        \"name\" : \"DortestDalere\",\r\n        \"description\" : \"normal sender  \"\r\n\r\n    }\r\n    \r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipment/addMany/shipmentWorkflow",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"addMany",
+								"shipmentWorkflow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/add/shipmentStatusWorkflowItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"name\" : \"Padding\",\r\n        \"description\" : \"Padding Normal delivery\",\r\n        \"status\" : \"6277cf0c2aa384e863a2d68b\",\r\n        \"workflow\" : \"6277d1a6682f263353c09856\",\r\n        \"position\" : \"start\",\r\n        \"next_possible_status\" : [\"62901e33a5e07f813b53d2e4\",\"62901d2ea5e07f813b53d2d6\",\"62901db8a5e07f813b53d2dd\"]\r\n\r\n    }\r\n\r\n    \r\n   \r\n    \r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipment/add/shipmentStatusWorkflowItem",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"add",
+								"shipmentStatusWorkflowItem"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "shipment/workflow/getStatus/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipment/workflow/getStatus/6277d1a6682f263353c09856",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"workflow",
+								"getStatus",
+								"6277d1a6682f263353c09856"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "asign/newNextStatus/:id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"newPossibleStatusListe\" : [\"6277fa546f190b4392da6186\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipment/asign/newNextStatus/6277d8a20e7a562d6fb00c3a",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"asign",
+								"newNextStatus",
+								"6277d8a20e7a562d6fb00c3a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:3001/api/v1/shipment/getall/workflow",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipment/getall/workflow",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipment",
+								"getall",
+								"workflow"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List/shippingTariff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"array\" : [\"627ed7d3b06c75342df9a04c\" ,\"6280312a8036eec6fd0c401e\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:3001/api/v1/shipping/List/shippingTariff",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"shipping",
+								"List",
+								"shippingTariff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:3001/api/v1/foradmin/get/analytics/2022-06-03",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3001/api/v1/foradmin/get/analytics/2022-06-03",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3001",
+					"path": [
+						"api",
+						"v1",
+						"foradmin",
+						"get",
+						"analytics",
+						"2022-06-03"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

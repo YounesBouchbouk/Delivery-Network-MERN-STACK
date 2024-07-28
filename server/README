@@ -1,0 +1,67 @@
+This is a NodeJs project
+
+## Requirements
+
+NodeJS >= 16.13.0
+MongoDB >= 3.6 || Atlas mongodb database
+neo4j
+
+## install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+## Configure env variables in config.env
+
+```
+PORT                port ex : 3001
+NODE_ENV =              production || development
+DATABASE =              database host ex : 'mongodb+srv://younesdb:<PASSWORD>@cluster0.dyw5w.mongodb.net/DeliveryNetwork?retryWrites=true&w=majority'
+
+DATABASE_PASSWORD =       <PASSWORD> :   database password
+
+TOKEN_TIMER =    10d      can be updated
+TOKEN_SECRET = "This-is-my-secret-token-please-don't-touch"    token key  can be updated
+JWT_COOKIE_EXPIRES_IN = 90   //can be updated
+
+CLOUDINARY_URL=   cloudinary host url
+
+CLOUDINARY_API = your api
+CLOUDINARY_SECRET =  your secret
+CLOUDINARY_USER_NAME=   user name
+
+
+NEO4J_HOST =   neo4j host
+NEO4J_USER=       user
+NEO4J_PASSWORD =   password
+
+SMTP_SERVICE =    smtp service case gmail
+SMTP_EMAIL =    smtp email
+SMTP_PASSWORD =    smtp password
+
+```
+
+## Launch server.js
+
+```
+npm start
+
+```
+
+## Read documentation of API
+
+```
+/api-docs
+
+```
+
+## .postman_collection file :
+
+```
+DeliveryNetwork.postman_collection.json
+
+
+```

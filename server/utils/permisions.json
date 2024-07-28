@@ -1,0 +1,17 @@
+
+    [
+        {
+            "moduleName" : "users" , 
+            "permisions" : [
+                {
+                    "role" :  "user" , 
+                    "actions" : {
+                        "read"  : true , 
+                        "create" : true ,
+                        "update" : true,
+                        "delete" :true
+                    } 
+                }
+            ]
+        }
+    ]
